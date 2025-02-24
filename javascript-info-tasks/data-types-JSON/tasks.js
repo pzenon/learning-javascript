@@ -48,7 +48,7 @@ console.log(JSON.stringify(bread));
 // ok, I see
 // what about JSON.parse
 
-let courses = '["js", "c", "mathematics"]';
+let courses = `["js", "c", "mathematics"]`;
 let jsonToParse = `{
     "name": "a name",
     "age": 99,
