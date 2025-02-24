@@ -61,3 +61,22 @@ jsonToParse = JSON.parse(jsonToParse);
 
 console.log(courses[2]);
 console.log(jsonToParse.someArray[4]);
+
+let meeting = {
+    title: "Meeting NOW",
+    date: new Date(),
+    place: "Right here!"
+};
+
+meeting = JSON.stringify(meeting, null, 2);
+console.log(`Stringified meeting: ${meeting}`);
+
+meeting = JSON.parse(meeting, function(key, value) {
+    if (key == 'date') return new Date(value);
+    return value;
+});
+console.log(meeting.date.getDate());
+
+
+///////
+
