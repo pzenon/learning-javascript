@@ -71,7 +71,7 @@ let meeting = {
 meeting = JSON.stringify(meeting, null, 2);
 console.log(`Stringified meeting: ${meeting}`);
 
-meeting = JSON.parse(meeting, function(key, value) {
+meeting = JSON.parse(meeting, function (key, value) {
     if (key == 'date') return new Date(value);
     return value;
 });
@@ -85,10 +85,10 @@ console.log(meeting.date.getDate());
 let user = {
     name: "John Smith",
     age: 35
-  };
+};
 
-  user = JSON.stringify(user);
-  anotherVariable = JSON.parse(user);
+user = JSON.stringify(user);
+anotherVariable = JSON.parse(user);
 
 
 // Exclude backreferences
@@ -96,20 +96,19 @@ let user = {
 
 let room = {
     number: 23
-  };
-  
-  let meetup = {
+};
+
+let meetup = {
     title: "Conference",
-    occupiedBy: [{name: "John"}, {name: "Alice"}],
+    occupiedBy: [{ name: "John" }, { name: "Alice" }],
     place: room
-  };
-  
-  // circular references
-  room.occupiedBy = meetup;
-  meetup.self = meetup;
-  
-  let excludeBackRef = JSON.stringify(meetup, function replacer(key, value) {
+};
+
+// circular references
+room.occupiedBy = meetup;
+meetup.self = meetup;
+
+let excludeBackRef = JSON.stringify(meetup, function replacer(key, value) {
     if (value === 'meetup') return undefined;
     return value;
-  });
-  
+});
