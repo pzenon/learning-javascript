@@ -77,6 +77,16 @@ meeting = JSON.parse(meeting, function(key, value) {
 });
 console.log(meeting.date.getDate());
 
+// ok, I see!
+//
+// TASKS:
+// Turn the object into JSON and back
 
-///////
+let user = {
+    name: "John Smith",
+    age: 35
+  };
+
+  user = JSON.stringify(user);
+  anotherVariable = JSON.parse(user);
 
