@@ -16,11 +16,7 @@ describe("Turn the object into JSON and back", function () {
 describe("Exclude backreferences", function () {
 
     it('the result stringifies everything but the circular references', function () {
-        expect(excludeBackRef).to.eql(`{
-            "title":"Conference",
-            "occupiedBy":[{"name":"John"},{"name":"Alice"}],
-            "place":{"number":23}
-            }`);
+        expect(excludeBackRef).to.eql(`{"title":"Conference","occupiedBy":[{"name":"John"},{"name":"Alice"}],"place":{"number":23}}`);
     });
 
 });

@@ -110,6 +110,5 @@ room.occupiedBy = meetup;
 meetup.self = meetup;
 
 let excludeBackRef = JSON.stringify(meetup, function replacer(key, value) {
-    if (key === 'occupiedBy' || key === 'self') return undefined;
-    return value;
+    return (key != "" && value == meetup) ? undefined : value;
 });
