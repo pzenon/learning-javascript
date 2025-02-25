@@ -7,7 +7,7 @@ Repository for JavaScript practice tasks and tracking my progress
 - [x] JavaScript Fundamentals
 - [x] Code quality
 - [x] Objects: the basics
-- [ ] Data types
+- [x] Data types
 - [ ] Advanced working with functions
 - [ ] Object properties configuration
 - [ ] Prototypes, inheritance
