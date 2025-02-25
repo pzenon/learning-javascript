@@ -92,7 +92,8 @@ anotherVariable = JSON.parse(user);
 
 
 // Exclude backreferences
-// Write replacer function to stringify everything, but remove properties that reference meetup:
+// Write replacer function to stringify everything, but remove properties that 
+// reference meetup:
 
 let room = {
     number: 23
@@ -109,6 +110,6 @@ room.occupiedBy = meetup;
 meetup.self = meetup;
 
 let excludeBackRef = JSON.stringify(meetup, function replacer(key, value) {
-    if (value === 'meetup') return undefined;
+    if (key === 'occupiedBy' || key === 'self') return undefined;
     return value;
 });
