@@ -64,3 +64,13 @@ describe('Output a single-linked list', function () {
     })
     
 });
+
+describe('Output a single-linked list in reverse order', function () {
+
+    describe('using a loop', function () {
+        it('prints the list correctly', function () {
+            expect(printListLoopReverse(list)).to.eql([4,3,2,1])
+        })
+    })
+    
+});

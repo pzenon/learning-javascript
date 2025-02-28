@@ -74,14 +74,14 @@ function printListLoop(list) {
     let test = [];
     let check = list;
     while (check) {
-        console.log(check.value);
         test.push(check.value);
         check = check.next;
     }
     return test;
 }
 
-// using recursion
+// using a recursion
+// (I don't know how to write a test for this, so I used console.log)
 
 function printListRecursion(list) {
     console.log(list.value);
@@ -91,4 +91,35 @@ function printListRecursion(list) {
 }
 
 // test
-printListRecursion(list);
+// console.log('recursion');
+// printListRecursion(list);
+
+// Task 5
+// Output a single-linked list in the reverse order
+// Using a loop:
+
+function printListLoopReverse(list) {
+    let test = [];
+    let check = list;
+    while (check) {
+        test.push(check.value);
+        check = check.next;
+    }
+    return test.reverse();
+}
+
+// Using a recursion
+// (I don't know how to write a test for this, so I used console.log)
+
+function printListRecursionReverse(list) {
+    if (!list.next) {
+        console.log(list.value);
+    } else {
+        printListRecursionReverse(list.next);
+        console.log(`${list.value}`);
+    }
+}
+
+// test
+// console.log('recursion reverse');
+// printListRecursionReverse(list);
