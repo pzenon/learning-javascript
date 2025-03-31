@@ -8,9 +8,9 @@ Repository for JavaScript practice tasks and tracking my progress
 - [x] Code quality
 - [x] Objects: the basics
 - [x] Data types
-- [ ] Advanced working with functions
-- [ ] Object properties configuration
-- [ ] Prototypes, inheritance
+- [x] Advanced working with functions
+- [x] Object properties configuration
+- [x] Prototypes, inheritance
 - [ ] Classes
 - [ ] Error handling
 - [ ] Promises, async/await
